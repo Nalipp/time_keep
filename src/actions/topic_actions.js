@@ -6,7 +6,7 @@ export const removeTopic = topic => ({
   topic,
 });
 
-export const receiveCategory = topic => ({
+export const receiveTopic = topic => ({
   type : RECEIVE_TOPIC,
   topic,
 });
