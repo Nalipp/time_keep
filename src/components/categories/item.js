@@ -1,7 +1,6 @@
 import React from 'react';
 import ItemDisplay from './item_display';
 import FormInputContainer from './form_input_container';
-import './item.css';
 
 class Item extends React.Component {
   constructor(props) {
@@ -15,8 +14,14 @@ class Item extends React.Component {
     this.setState({displayForm: !this.state.displayForm});
   }
   render() {
+    const itemContainerStyle ={
+      width: '20em',
+      margin: '1em',
+      padding: '.4em',
+      border: '.12em solid darkgrey',
+    }
     return (
-      <div className="Item-container">
+      <div style={itemContainerStyle}>
         {this.state.displayForm
         ?
           <FormInputContainer 

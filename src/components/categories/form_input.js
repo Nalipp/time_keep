@@ -20,14 +20,36 @@ class FormInput extends React.Component {
     this.props.receiveCategory(update)
   }
   render() {
+    const toggleStyle = {
+      cursor: 'pointer',
+    }
+    const inputStyle = {
+      borderRadius: '.4em',
+      border: '.15em solid darkgrey',
+      padding: '.3em',
+      fontSize: '1em', 
+      margin: '.3em 0 .3em .1em',
+    }
+    const buttonStyle = {
+      borderRadius: '.4em',
+      background: 'none',
+      border: '.12em solid darkgrey',
+      margin: '0 0 0 .4em',
+      padding: '.2em .4em',
+    }
     return (
-      <form onSubmit={this.handleSubmit}>
-        <input 
-          value={this.state.value}
-          onChange={this.handleChange}/>
+      <div>
+        <p style={toggleStyle}
+          onClick={this.props.toggleDisplayForm}>X</p>
+        <form onSubmit={this.handleSubmit}>
+          <input 
+            style={inputStyle}
+            value={this.state.value}
+            onChange={this.handleChange}/>
 
-          <button>submit</button>
-      </form>
+            <button style={buttonStyle}>submit</button>
+        </form>
+      </div>
     )
   }
 }
