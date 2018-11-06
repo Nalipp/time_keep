@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import Item from './item';
+import FormInput from './form_input';
 import { receiveCategory } from '../../actions/category_actions';
 
 const mapDispatchToProps = dispatch => ({
@@ -9,6 +9,7 @@ const mapDispatchToProps = dispatch => ({
 export default connect(
   null,
   mapDispatchToProps,
-)(Item);
+)(FormInput);
+
 
 

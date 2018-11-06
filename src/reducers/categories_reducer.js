@@ -16,11 +16,16 @@ const defaultState = {
 }
 
 const categoriesReducer = (state = defaultState, action) => {
+  let newState;
   switch (action.type) {
     case RECEIVE_CATEGORY:
-      return state
+      newState = Object.assign({}, state);
+      newState[action.category.id] = action.category;
+      return newState
     case REMOVE_CATEGORY:
-      return state
+      newState = Object.assign({}, state);
+      delete newState[action.category.id];
+      return newState
     default:
       return state;
   }
