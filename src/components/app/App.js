@@ -1,10 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
+import CategoriesListContainer from '../categories/list_container';
 import './App.css';
 
-class App extends Component {
+class App extends React.Component {
   render() {
     return (
-      <h3>App!</h3>
+      <CategoriesListContainer />
     );
   }
 }

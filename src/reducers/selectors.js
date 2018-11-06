@@ -1,5 +1,4 @@
-export const getAllCategories = (state) => { 
-  return Object.keys(state).map(key => state[key]);
+export const getAllCategories = ({ categories }) => { 
+  return Object.keys(categories).map(key => categories[key]);
 }
-
 
