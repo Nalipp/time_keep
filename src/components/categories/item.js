@@ -6,7 +6,7 @@ class Item extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      displayForm: false,
+      displayForm: props.category.name === '',
     }
     this.toggleDisplayForm = this.toggleDisplayForm.bind(this);
   }

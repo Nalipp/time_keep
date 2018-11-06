@@ -8,7 +8,7 @@ const ItemDisplay = ({category, toggleDisplayForm}) => {
     fontSize: '.7em',
     cursor: 'pointer',
     padding: '0 .8em 0 0',
-  }
+  } 
   return (
     <div style={itemDisplayStyle}>
       <p style={itemDisplayEditStyle}
