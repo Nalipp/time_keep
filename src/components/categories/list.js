@@ -1,11 +1,11 @@
 import React from 'react';
-import Item from './item';
+import ItemContainer from './item_container';
 
 const List = ({ categories }) => (
   <ul>
     {categories.map(category => (
       <li key={category.id}>
-        <Item category={category} />
+        <ItemContainer category={category} />
       </li>
     ))}
   </ul>
