@@ -6,8 +6,9 @@ const List = ({ categories }) => (
     borderTop: '.12em solid darkgrey',
     height: '80%',
     overflow: 'hidden',
-    overflowY: 'scroll',
+    overflowX: 'scroll',
     minWidth: 0,
+    display: 'flex',
   }}>
     {categories.map(category => (
       <li key={category.id}>

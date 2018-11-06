@@ -1,6 +1,7 @@
 import React from 'react';
 import ItemDisplay from './item_display';
 import FormInputContainer from './form_input_container';
+import './item.css';
 
 class Item extends React.Component {
   constructor(props) {
@@ -15,7 +16,7 @@ class Item extends React.Component {
   }
   render() {
     return (
-      <div>
+      <div className="Item-container">
         {this.state.displayForm
         ?
           <FormInputContainer 
