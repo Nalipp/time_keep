@@ -25,7 +25,7 @@ const Detail = ({ topic, toggleDetail }) => {
     <ul>
       <div style={controlStyle}>
         <p style={toggleStyle} onClick={toggleDetail}>X</p>
-        <TimerControlContainer />
+        <TimerControlContainer topic={topic} />
       </div>
       <li>
         <p style={labelStyle}>title</p>
