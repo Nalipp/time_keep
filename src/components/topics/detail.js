@@ -1,4 +1,5 @@
 import React from 'react';
+import TimerControlContainer from '../time/timer_control_container';
 
 const Detail = ({ topic, toggleDetail }) => {
   const toggleStyle = {
@@ -17,9 +18,15 @@ const Detail = ({ topic, toggleDetail }) => {
     fontSpacing: '.05em',
     fontSize: '.8em',
   }
+  const controlStyle = {
+    display: 'flex',
+  }
   return (
     <ul>
-      <p style={toggleStyle} onClick={toggleDetail}>X</p>
+      <div style={controlStyle}>
+        <p style={toggleStyle} onClick={toggleDetail}>X</p>
+        <TimerControlContainer />
+      </div>
       <li>
         <p style={labelStyle}>title</p>
         <p style={titleStyle}>{topic.title}</p>
