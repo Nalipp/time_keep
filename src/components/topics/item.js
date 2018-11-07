@@ -1,14 +1,12 @@
 import React from 'react';
 import ItemDisplay from './item_display';
 import FormInputContainer from './form_input_container';
-import NewTopicContainer from '../topics/new_topic_container';
-import TopicsListContainer from '../topics/list_container';
 
 class Item extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      displayForm: props.category.name === '',
+      displayForm: props.topic.title === '',
     }
     this.toggleDisplayForm = this.toggleDisplayForm.bind(this);
   }
@@ -17,27 +15,24 @@ class Item extends React.Component {
   }
   render() {
     const itemContainerStyle ={
-      width: '20em',
-      margin: '1em 0 0 1em',
+      margin: '1em auto',
+      borderRadius: '.4em',
       padding: '.4em',
-      border: '.12em solid darkgrey',
+      width: '80%',
+      border: '.08em solid darkgrey',
     }
     return (
-      <div>
-        <div style={itemContainerStyle}>
+      <div style={itemContainerStyle}>
           {this.state.displayForm
           ?
             <FormInputContainer 
               toggleDisplayForm={this.toggleDisplayForm}
-              category={this.props.category} />
+              topic={this.props.topic} />
           :
             <ItemDisplay 
-              category={this.props.category}
+              topic={this.props.topic}
               toggleDisplayForm={this.toggleDisplayForm} />} 
 
-        </div>
-        <NewTopicContainer category={this.props.category} />
-        <TopicsListContainer category={this.props.category} />
       </div>
     )
   }
