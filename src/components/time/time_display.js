@@ -4,11 +4,17 @@ const TimeDisplay = ({ time }) => {
   const displayStyle = {
     padding: '.4em',
   }
-  const format = (t) => {
-    return '00:00:0' + t;
+  const format = time => String.time().length < 2 ? '0' + time : time;
+  const convert = (miliseconds) => {
+    const total = miliseconds / 1000;
+    const sec = Math.floor(total % 60);
+    const min = Math.floor((total / 60) % 60);
+    const hour = Math.floor((total / 3600);
+
+    return format(hour) + ':' + format(min) + ':' + format(sec); 
   }
   return (
-    <p style={displayStyle}>{format(time)}</p>
+    <p style={displayStyle}>{convert(time)}</p>
   )
 }
 

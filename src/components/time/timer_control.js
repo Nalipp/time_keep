@@ -52,7 +52,6 @@ class TimerControl extends React.Component {
     this.setState({time: 0});
   }
   toggleTimeLog() {
-    console.log(!this.state.displayTimeLog) 
     this.setState({displayTimeLog: !this.state.displayTimeLog});
   }
   render() {
