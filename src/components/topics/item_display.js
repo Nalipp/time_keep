@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ItemDisplay = ({topic, toggleDisplayForm}) => {
+const ItemDisplay = ({topic, toggleDisplayForm, toggleDetail}) => {
   const itemDisplayStyle = {
     display: 'flex',
   }
@@ -9,14 +9,17 @@ const ItemDisplay = ({topic, toggleDisplayForm}) => {
     cursor: 'pointer',
     padding: '0 .8em 0 0',
   } 
+  const itemStyle={
+    cursor: 'pointer'
+  }
   return (
     <div style={itemDisplayStyle}>
       <p style={itemDisplayEditStyle}
          onClick={toggleDisplayForm}>edit</p>
-      <p>{topic.title}</p>
+      <p style={itemStyle} 
+        onClick={toggleDetail}>{topic.title}</p>
     </div>
   )
 }
 
 export default ItemDisplay;
-

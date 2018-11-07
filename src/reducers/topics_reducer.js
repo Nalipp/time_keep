@@ -16,7 +16,7 @@ const defaultState = {
   3: {
     id: 3,
     title: 'topic3',
-    description: '',
+    description: 'This is a standard length description that we might expect.',
     categoryId: 2,
   },
 }
