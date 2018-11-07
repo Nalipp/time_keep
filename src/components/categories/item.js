@@ -20,7 +20,7 @@ class Item extends React.Component {
       width: '20em',
       margin: '1em 0 0 1em',
       padding: '.4em',
-      border: '.12em solid darkgrey',
+      border: '.12em solid lightgrey',
     }
     return (
       <div>

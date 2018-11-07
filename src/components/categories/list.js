@@ -6,6 +6,7 @@ const List = ({ categories, receiveCategory }) => {
     borderTop: '.12em solid darkgrey',
     height: '80%',
     overflow: 'hidden',
+    overflowY: 'scroll',
     overflowX: 'scroll',
     minWidth: 0,
   }
