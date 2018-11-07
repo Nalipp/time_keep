@@ -24,10 +24,10 @@ class TimerControl extends React.Component {
   }
   startTick() {
     const timestamp = new Date();
-    const startTime = timestamp.getTime();
+    const newTime = timestamp.getTime();
     this.setState({
       timeRunning: !this.state.timeRunning,
-      startTime: startTime,
+      startTime: newTime,
     });
     clearInterval(this.timer);
     this.timer = setInterval(this.tick, 1000);
@@ -79,13 +79,9 @@ class TimerControl extends React.Component {
     const innerContainer = {
       display: 'flex',
     }
-    const editStyle = {
-      fontSize: '.7em',
-      padding: '0 .6em 0 0 ',
-    }
     const timeDisplayStyle = {
       display: 'flex',
-      margin: '1em 0 0 0',
+      margin: '1em .6em 0 0',
       cursor: 'pointer',
     }
     const totalTimeStyle = {
@@ -107,14 +103,13 @@ class TimerControl extends React.Component {
               onClick={this.startTick}>start</button>}
 
             <div style={{width: '50%'}}>
-              <TimeDisplay time={this.state.time}/>
+              <TimeDisplay time={this.state.time * 1000}/>
             </div>
         </div>
         <div style={timeDisplayStyle}
           onClick={this.toggleTimeLog}>
-          <p style={editStyle}>edit</p>
           <p style={totalTimeStyle}>Total Time: </p>
-          <TimeDisplay time={0} />
+          <TimeDisplay time={this.props.timeTotal} />
         </div>
       </div>
     )
