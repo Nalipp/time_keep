@@ -25,3 +25,12 @@ export const getTimeTotalByTopicId = (state, topic) => {
   const times = getTimesByTopicId(state, topic);
   return times.reduce((a, time) => a + time.totalTime, 0);
 }
+
+export const getTimeTotalByCategoryId = (state, {category}) => {
+  const topics = getTopicsByCategoryId(state, category)
+  let total = 0;
+  topics.forEach(topic => {
+    total += getTimeTotalByTopicId(state, topic);
+  });
+  return total;
+}

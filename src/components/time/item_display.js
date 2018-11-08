@@ -2,7 +2,6 @@ import React from 'react';
 import TimerDisplay from './timer_display';
 
 const ItemDisplay = ({ time, removeTime }) => {
-  console.log(time) 
   const containerStyle = {
     display: 'flex',
     position: 'relative',

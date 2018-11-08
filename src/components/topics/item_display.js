@@ -7,10 +7,11 @@ const ItemDisplay = ({topic, toggleDisplayForm, toggleDetail}) => {
   const itemDisplayEditStyle = {
     fontSize: '.7em',
     cursor: 'pointer',
-    padding: '0 .8em 0 0',
+    margin: '0 .8em 0 0',
   } 
   const itemStyle={
-    cursor: 'pointer'
+    cursor: 'pointer',
+    width: '90%',
   }
   return (
     <div style={itemDisplayStyle}>

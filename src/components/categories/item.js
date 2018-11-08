@@ -1,5 +1,5 @@
 import React from 'react';
-import ItemDisplay from './item_display';
+import ItemDisplayContainer from './item_display_container';
 import FormInputContainer from './form_input_container';
 import NewTopicContainer from '../topics/new_topic_container';
 import TopicsListContainer from '../topics/list_container';
@@ -31,7 +31,7 @@ class Item extends React.Component {
               toggleDisplayForm={this.toggleDisplayForm}
               category={this.props.category} />
           :
-            <ItemDisplay 
+            <ItemDisplayContainer 
               category={this.props.category}
               toggleDisplayForm={this.toggleDisplayForm} />} 
 
