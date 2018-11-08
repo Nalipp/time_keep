@@ -117,7 +117,9 @@ class TimerControl extends React.Component {
           <p style={totalTimeStyle}>Total Time: </p>
           <TimerDisplay time={this.props.timeTotal} />
         </div>
-        <ListContainer topic={this.props.topic} />
+        {this.state.displayTimeLog &&
+          <ListContainer 
+            topic={this.props.topic} />}
       </div>
     )
   }
