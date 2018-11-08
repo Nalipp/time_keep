@@ -1,5 +1,5 @@
 import React from 'react';
-import ItemDisplay from './item_display';
+import ItemDisplayContainer from './item_display_container';
 
 class Item extends React.Component {
   constructor(props) {
@@ -19,7 +19,7 @@ class Item extends React.Component {
           ?
             <p>form</p>
           :
-            <ItemDisplay 
+            <ItemDisplayContainer
               toggleForm={this.toggleForm}
               time={this.props.time} />}
       </div>
