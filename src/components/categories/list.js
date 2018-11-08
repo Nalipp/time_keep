@@ -16,15 +16,15 @@ const List = ({ categories, receiveCategory }) => {
   const buttonStyle = {
     background: 'lightgrey',
     borderRadius: '0 0 .4em .4em',
-    fontSize: '1.5em',
-    padding: '0 1.5em',
+    fontSize: '.9em',
+    padding: '.4em 1em',
   }
   const date = new Date();
   const newCategory = {id: date.getTime(), name: ''};
   return (
     <div style={containerStyle}>
       <button style={buttonStyle}
-        onClick={receiveCategory.bind(this, newCategory)}>+</button>
+        onClick={receiveCategory.bind(this, newCategory)}>+ category</button>
       <ul style={ulStyle}>
         {categories.map(category => (
           <li key={category.id}>

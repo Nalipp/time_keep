@@ -4,9 +4,9 @@ const NewTopic = ({ receiveTopic, category }) => {
   const buttonStyle = {
     background: 'lightgrey',
     borderRadius: '0 0 .4em .4em',
-    fontSize: '1em',
-    padding: '0 .7em',
-    margin: '0 0 0 1em',
+    fontSize: '.7em',
+    padding: '.26em .7em',
+    margin: '0 0 0 1.4em',
   }
   const handleNewTopic = () =>{
     const date = new Date();
@@ -20,7 +20,7 @@ const NewTopic = ({ receiveTopic, category }) => {
   return (
     <button 
       style={buttonStyle}
-      onClick={handleNewTopic}>+</button>
+      onClick={handleNewTopic}>+ topic</button>
   )
 }
 
