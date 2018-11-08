@@ -1,3 +1,5 @@
+import { getLastMondayInMilliseconds, getTime } from '../util';
+
 export const getAllCategories = ({ categories }) => { 
   return Object.keys(categories).map(key => categories[key]);
 }
@@ -32,5 +34,23 @@ export const getTimeTotalByCategoryId = (state, {category}) => {
   topics.forEach(topic => {
     total += getTimeTotalByTopicId(state, topic);
   });
+  return total;
+}
+
+export const getTimeTotal = ({ times }) => {
+  const timesArr = [];
+  Object.keys(times).forEach(time => timesArr.push(times[time]));
+  return timesArr.reduce((sum, time) => sum + time.totalTime, 0)
+}
+
+export const getTimeTotalByWeek = ({ times }) => {
+  const lastMonday = getLastMondayInMilliseconds(getTime());
+  let total = 0;
+  for (let key in times) {
+    let time = times[key];
+    if (time.startTime > lastMonday) {
+      total += time.totalTime;
+    }
+  }
   return total;
 }
