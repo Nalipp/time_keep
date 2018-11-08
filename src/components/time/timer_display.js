@@ -1,6 +1,6 @@
 import React from 'react';
 
-const TimeDisplay = ({ time }) => {
+const TimerDisplay = ({ time }) => {
   const displayStyle = {
     padding: '.4em',
   }
@@ -18,6 +18,6 @@ const TimeDisplay = ({ time }) => {
   )
 }
 
-export default TimeDisplay;
+export default TimerDisplay;
 
 
