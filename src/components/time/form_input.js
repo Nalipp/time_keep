@@ -14,7 +14,7 @@ class FormInput extends React.Component {
   }
   handleSubmit(e) {
     e.preventDefault();
-    if (this.state.value) {
+    if (this.state.value && !isNaN(Number(this.state.value))) {
       const timeStamp = new Date().getTime();
       const newTime = {
         id: timeStamp,
@@ -30,17 +30,19 @@ class FormInput extends React.Component {
   render() {
     const inputStyle = {
       borderRadius: '.4em',
-      border: '.15em solid darkgrey',
-      padding: '.3em',
-      fontSize: '1em', 
-      margin: '.3em 0 .3em .1em',
+      border: '.1em solid darkgrey',
+      padding: '.25em',
+      fontSize: '5.em', 
+      width: '8em',
+      margin: '.25em 0 .25em .5em',
     }
     const buttonStyle = {
       borderRadius: '.4em',
       background: 'none',
-      border: '.12em solid darkgrey',
-      margin: '0 0 0 .4em',
-      padding: '.2em .4em',
+      border: '.1em solid darkgrey',
+      margin: '0 0 0 .6em',
+      fontSize: '.6em',
+      padding: '.1em .3em',
     }
     return (
       <div>
@@ -48,6 +50,7 @@ class FormInput extends React.Component {
           <input 
             style={inputStyle}
             value={this.state.value}
+            placeholder="add minutes"
             onChange={this.handleChange}/>
 
             <button style={buttonStyle}>submit</button>
