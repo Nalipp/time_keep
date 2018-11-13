@@ -1,7 +1,7 @@
 import React from 'react';
-import TimerDisplay from '../time/timer_display';
+import TimerDisplay from 'components/time/timer_display';
 import { connect } from 'react-redux';
-import { getTimeTotalByCategoryId } from '../../reducers/selectors';
+import { getTimeTotalByCategoryId } from 'reducers/selectors';
 
 const ItemDisplay = ({category, toggleDisplayForm, timeTotal}) => {
   const itemDisplayStyle = {

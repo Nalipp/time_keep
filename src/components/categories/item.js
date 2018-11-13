@@ -1,8 +1,8 @@
 import React from 'react';
-import ItemDisplay from './item_display';
-import FormInput from './form_input';
-import NewTopic from '../topics/new_topic';
-import TopicsList from '../topics/list';
+import ItemDisplay from 'components/categories/item_display';
+import FormInput from 'components/categories/form_input';
+import NewTopic from 'components/topics/new_topic';
+import TopicsList from 'components/topics/list';
 
 class Item extends React.Component {
   constructor(props) {
