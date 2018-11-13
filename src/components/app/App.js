@@ -1,8 +1,8 @@
 import React from 'react';
-import CategoriesList from '../categories/list';
-import Header from '../header/Header';
-import Footer from '../footer/Footer';
-import './App.css';
+import CategoriesList from 'components/categories/list';
+import Header from 'components/header/Header';
+import Footer from 'components/footer/Footer';
+import 'components/app/App.css';
 
 class App extends React.Component {
   render() {
