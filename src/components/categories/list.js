@@ -1,5 +1,8 @@
 import React from 'react';
 import Item from './item';
+import { connect } from 'react-redux';
+import { getAllCategories } from '../../reducers/selectors';
+import * as actions from '../../actions/category_actions';
 
 const List = ({ categories, receiveCategory }) => {
   const containerStyle = {
@@ -36,4 +39,11 @@ const List = ({ categories, receiveCategory }) => {
   )
 }
 
-export default List;
+const mapStateToProps = state => ({
+  categories: getAllCategories(state),
+});
+
+export default connect(
+  mapStateToProps,
+  actions,
+)(List);

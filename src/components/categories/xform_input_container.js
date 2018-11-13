@@ -12,5 +12,3 @@ export default connect(
   mapDispatchToProps,
 )(FormInput);
 
-
-

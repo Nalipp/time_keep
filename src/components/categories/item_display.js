@@ -1,5 +1,7 @@
 import React from 'react';
 import TimerDisplay from '../time/timer_display';
+import { connect } from 'react-redux';
+import { getTimeTotalByCategoryId } from '../../reducers/selectors';
 
 const ItemDisplay = ({category, toggleDisplayForm, timeTotal}) => {
   const itemDisplayStyle = {
@@ -36,4 +38,8 @@ const ItemDisplay = ({category, toggleDisplayForm, timeTotal}) => {
   )
 }
 
-export default ItemDisplay;
+const mapStateToProps = (state, category) => ({
+  timeTotal: getTimeTotalByCategoryId(state, category),
+});
+
+export default connect(mapStateToProps, null)(ItemDisplay);

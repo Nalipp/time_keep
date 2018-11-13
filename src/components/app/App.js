@@ -1,5 +1,5 @@
 import React from 'react';
-import CategoriesListContainer from '../categories/list_container';
+import CategoriesList from '../categories/list';
 import Header from '../header/Header';
 import Footer from '../footer/Footer';
 import './App.css';
@@ -15,7 +15,7 @@ class App extends React.Component {
         padding: '1em',
       }}>
         <Header />
-        <CategoriesListContainer />
+        <CategoriesList />
         <Footer />
       </div>
     );

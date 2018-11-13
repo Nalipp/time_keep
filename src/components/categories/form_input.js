@@ -1,4 +1,6 @@
 import React from 'react';
+import * as actions from '../../actions/category_actions';
+import { connect } from 'react-redux';
 
 class FormInput extends React.Component { 
   constructor(props) {
@@ -72,4 +74,4 @@ class FormInput extends React.Component {
   }
 }
 
-export default FormInput;
+export default connect(null, actions)(FormInput);
