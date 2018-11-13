@@ -1,4 +1,6 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import * as actions from '../../actions/topic_actions';
 
 const NewTopic = ({ receiveTopic, category }) => {
   const buttonStyle = {
@@ -24,4 +26,4 @@ const NewTopic = ({ receiveTopic, category }) => {
   )
 }
 
-export default NewTopic;
+export default connect(null, actions)(NewTopic);

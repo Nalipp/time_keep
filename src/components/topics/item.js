@@ -1,6 +1,6 @@
 import React from 'react';
 import ItemDisplay from './item_display';
-import FormInputContainer from './form_input_container';
+import FormInput from './form_input';
 import Detail from './detail';
 
 class Item extends React.Component {
@@ -37,7 +37,7 @@ class Item extends React.Component {
             toggleDisplayForm={this.toggleDisplayForm} />} 
 
         {this.state.displayForm &&
-          <FormInputContainer 
+          <FormInput 
             toggleDisplayForm={this.toggleDisplayForm}
             topic={this.props.topic} />}
 

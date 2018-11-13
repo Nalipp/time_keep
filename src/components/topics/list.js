@@ -1,5 +1,8 @@
 import React from 'react';
 import Item from './item';
+import { connect } from 'react-redux';
+import { getTopicsByCategoryId } from '../../reducers/selectors';
+import * as actions from '../../actions/topic_actions';
 
 const List = ({ topics }) => {
   return (
@@ -13,5 +16,9 @@ const List = ({ topics }) => {
   )
 }
 
-export default List;
+const mapStateToProps = (state, {category}) => ({
+  topics: getTopicsByCategoryId(state, category),
+});
+
+export default connect(mapStateToProps, actions)(List);
 

@@ -1,8 +1,8 @@
 import React from 'react';
 import ItemDisplay from './item_display';
 import FormInput from './form_input';
-import NewTopicContainer from '../topics/new_topic_container';
-import TopicsListContainer from '../topics/list_container';
+import NewTopic from '../topics/new_topic';
+import TopicsList from '../topics/list';
 
 class Item extends React.Component {
   constructor(props) {
@@ -36,8 +36,8 @@ class Item extends React.Component {
               toggleDisplayForm={this.toggleDisplayForm} />} 
 
         </div>
-        <NewTopicContainer category={this.props.category} />
-        <TopicsListContainer category={this.props.category} />
+        <NewTopic category={this.props.category} />
+        <TopicsList category={this.props.category} />
       </div>
     )
   }
