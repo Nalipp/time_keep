@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import 'index.css';
-import Root from 'components/root';
+import Main from 'components/main';
 import * as serviceWorker from 'serviceWorker';
 
-ReactDOM.render(<Root />, document.getElementById('root'));
+ReactDOM.render(<Main />, document.getElementById('root'));
 serviceWorker.unregister();
 
 
