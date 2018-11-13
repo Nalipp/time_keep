@@ -1,4 +1,4 @@
-import { getLastMondayInMilliseconds, getTime } from '../util';
+import { getLastMondayInMilliseconds, getTime } from 'util';
 
 export const getAllCategories = ({ categories }) => { 
   return Object.keys(categories).map(key => categories[key]);

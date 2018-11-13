@@ -1,4 +1,4 @@
-import { RECEIVE_TOPIC, REMOVE_TOPIC } from '../actions/topic_actions.js';
+import { RECEIVE_TOPIC, REMOVE_TOPIC } from 'actions/topic_actions.js';
 
 const defaultState = {
   1: {

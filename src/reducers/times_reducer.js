@@ -1,4 +1,4 @@
-import { RECEIVE_TIME, REMOVE_TIME } from '../actions/time_actions.js';
+import { RECEIVE_TIME, REMOVE_TIME } from 'actions/time_actions.js';
 
 const defaultState = {
   1: {

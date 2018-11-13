@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux';
-import categoriesReducer from './categories_reducer';
-import topicsReducer from './topics_reducer';
-import timesReducer from './times_reducer';
+import categoriesReducer from 'reducers/categories_reducer';
+import topicsReducer from 'reducers/topics_reducer';
+import timesReducer from 'reducers/times_reducer';
 
 const rootReducer = combineReducers({ 
   categories : categoriesReducer,

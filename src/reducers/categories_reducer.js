@@ -1,4 +1,4 @@
-import { RECEIVE_CATEGORY, REMOVE_CATEGORY } from '../actions/category_actions.js';
+import { RECEIVE_CATEGORY, REMOVE_CATEGORY } from 'actions/category_actions.js';
 
 const defaultState = {
   1: {
