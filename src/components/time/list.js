@@ -1,8 +1,8 @@
 import React from 'react';
-import ItemDisplay from './item_display';
-import FormInput from './form_input';
+import ItemDisplay from 'components/time/item_display';
+import FormInput from 'components/time/form_input';
 import { connect } from 'react-redux';
-import { getTimesByTopicId } from '../../reducers/selectors';
+import { getTimesByTopicId } from 'reducers/selectors';
 
 const List = ({ topic, times }) => {
   return (

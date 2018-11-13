@@ -1,7 +1,7 @@
 import React from 'react';
-import TimerDisplay from './timer_display';
+import TimerDisplay from 'components/time/timer_display';
 import { connect } from 'react-redux';
-import * as actions from '../../actions/time_actions';
+import * as actions from 'actions/time_actions';
 
 const ItemDisplay = ({ time, removeTime }) => {
   const containerStyle = {

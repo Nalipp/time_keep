@@ -1,9 +1,9 @@
 import React from 'react';
-import TimerDisplay from './timer_display';
-import List from './list';
+import TimerDisplay from 'components/time/timer_display';
+import List from 'components/time/list';
 import { connect } from 'react-redux';
-import * as actions from '../../actions/time_actions';
-import { getTimeTotalByTopicId } from '../../reducers/selectors';
+import * as actions from 'actions/time_actions';
+import { getTimeTotalByTopicId } from 'reducers/selectors';
 
 class TimerControl extends React.Component {
   constructor(props) {

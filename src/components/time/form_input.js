@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import * as actions from '../../actions/time_actions';
+import * as actions from 'actions/time_actions';
 
 class FormInput extends React.Component { 
   constructor(props) {
