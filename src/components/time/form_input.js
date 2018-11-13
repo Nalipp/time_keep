@@ -1,4 +1,6 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import * as actions from '../../actions/time_actions';
 
 class FormInput extends React.Component { 
   constructor(props) {
@@ -60,5 +62,5 @@ class FormInput extends React.Component {
   }
 }
 
-export default FormInput;
+export default connect(null, actions)(FormInput);
 

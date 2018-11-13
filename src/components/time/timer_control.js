@@ -1,6 +1,9 @@
 import React from 'react';
 import TimerDisplay from './timer_display';
-import ListContainer from './list_container';
+import List from './list';
+import { connect } from 'react-redux';
+import * as actions from '../../actions/time_actions';
+import { getTimeTotalByTopicId } from '../../reducers/selectors';
 
 class TimerControl extends React.Component {
   constructor(props) {
@@ -118,11 +121,15 @@ class TimerControl extends React.Component {
           <TimerDisplay time={this.props.timeTotal} />
         </div>
         {this.state.displayTimeLog &&
-          <ListContainer 
+          <List 
             topic={this.props.topic} />}
       </div>
     )
   }
 }
 
-export default TimerControl;
+const mapStateToProps = (state, {topic}) => ({
+  timeTotal: getTimeTotalByTopicId(state, topic),
+});
+
+export default connect(mapStateToProps, actions)(TimerControl);

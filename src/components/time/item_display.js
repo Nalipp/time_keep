@@ -1,5 +1,7 @@
 import React from 'react';
 import TimerDisplay from './timer_display';
+import { connect } from 'react-redux';
+import * as actions from '../../actions/time_actions';
 
 const ItemDisplay = ({ time, removeTime }) => {
   const containerStyle = {
@@ -28,4 +30,4 @@ const ItemDisplay = ({ time, removeTime }) => {
   )
 }
 
-export default ItemDisplay;
+export default connect(null, actions)(ItemDisplay);

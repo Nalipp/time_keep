@@ -1,5 +1,5 @@
 import React from 'react';
-import TimerControlContainer from '../time/timer_control_container';
+import TimerControl from '../time/timer_control';
 
 const Detail = ({ topic, toggleDetail }) => {
   const toggleStyle = {
@@ -25,7 +25,7 @@ const Detail = ({ topic, toggleDetail }) => {
     <ul>
       <div style={controlStyle}>
         <p style={toggleStyle} onClick={toggleDetail}>X</p>
-        <TimerControlContainer topic={topic} />
+        <TimerControl topic={topic} />
       </div>
       <li>
         <p style={labelStyle}>title</p>

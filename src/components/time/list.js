@@ -1,16 +1,18 @@
 import React from 'react';
-import ItemDisplayContainer from './item_display_container';
-import FormInputContainer from './form_input_container';
+import ItemDisplay from './item_display';
+import FormInput from './form_input';
+import { connect } from 'react-redux';
+import { getTimesByTopicId } from '../../reducers/selectors';
 
 const List = ({ topic, times }) => {
   return (
     <ul>
-      <FormInputContainer
+      <FormInput
       topic={topic} />
 
       {times.map(time => (
         <li key={time.id}>
-          <ItemDisplayContainer 
+          <ItemDisplay 
             time={time} />
         </li>
       )).reverse()}
@@ -18,4 +20,8 @@ const List = ({ topic, times }) => {
   )
 }
 
-export default List;
+const mapStateToProps = (state, { topic }) => ({
+  times: getTimesByTopicId(state, topic),
+});
+
+export default connect(mapStateToProps, null)(List);
