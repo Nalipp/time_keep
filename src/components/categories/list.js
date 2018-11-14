@@ -28,7 +28,7 @@ const List = ({ categories, receiveCategory }) => {
     return (
       <ul style={ulStyle}>
         {categories.map(category => (
-          <li key={category.id}>
+          <li className='category-li' key={category.id}>
             <Item category={category} />
           </li>
         )).reverse()}

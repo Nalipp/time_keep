@@ -23,16 +23,19 @@ afterEach(() => {
   wrapper.unmount();
 });
 
-it('has a form input and a button', () => {
-  wrapper.find('.toggle-category-detail').simulate('click');
-  expect(wrapper.find('input').length).toEqual(1);
-});
+describe ('the toggle event', () => {
+  it('contains an edit button', () => {
+    expect(wrapper.render().text()).toContain('edit');
+  });
 
-it('has click handlers for X delete and submit', () => {
-  wrapper.find('.toggle-category-detail').simulate('click');
-  expect(wrapper.render().text()).toContain('X');
-  expect(wrapper.render().text()).toContain('delete');
-  expect(wrapper.render().text()).toContain('submit');
+  it('toggles detail category display', () => {
+    wrapper.find('.toggle-category-detail').simulate('click');
+    wrapper.update();
+    expect(wrapper.render().text()).toContain('X');
+    wrapper.find('.toggle-category-detail').simulate('click');
+    wrapper.update();
+    expect(wrapper.render().text()).toContain('edit');
+  });
 });
 
 describe ('the input form', () => {
@@ -44,6 +47,10 @@ describe ('the input form', () => {
     wrapper.update(); 
   });
 
+  it('has a submit button', () => {
+    expect(wrapper.render().text()).toContain('submit');
+  });
+
   it('has a input that users can type in', () => {
     expect(wrapper.find('input').prop('value')).toEqual('new category');
   });
@@ -53,6 +60,23 @@ describe ('the input form', () => {
     wrapper.update();
     wrapper.find('.toggle-category-detail').simulate('click');
     expect(wrapper.find('input').prop('value')).toEqual('new category');
+  });
+});
+
+describe ('the delete event', () => {
+  beforeEach(() => {
+    wrapper.find('.toggle-category-detail').simulate('click');
+    wrapper.update(); 
+  });
+
+  it('has a delete button', () => {
+    expect(wrapper.render().text()).toContain('delete');
+  });
+
+  it('removes the category when delete is clicked', () => {
+    wrapper.find('.delete-category').simulate('click');
+    wrapper.update();
+    expect(wrapper.find('.category-li').exists()).toEqual(false);
   });
 });
 

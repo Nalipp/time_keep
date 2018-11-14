@@ -57,8 +57,9 @@ class FormInput extends React.Component {
         <div style={{position: 'relative'}}>
           {this.props.category.name &&
             <p style={toggleStyle}
+              className='toggle-category-detail'
               onClick={this.props.toggleDisplayForm}>X</p>}
-          <p style={deleteStyle} 
+          <p className='delete-category' style={deleteStyle} 
             onClick={this.handleDelete}>delete</p>
         </div>
         <form onSubmit={this.handleSubmit}>
