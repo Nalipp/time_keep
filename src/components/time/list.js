@@ -5,11 +5,8 @@ import { connect } from 'react-redux';
 import { getTimesByTopicId } from 'reducers/selectors';
 
 const List = ({ topic, times }) => {
-  return (
+  const TimesUl = () => (
     <ul>
-      <FormInput
-      topic={topic} />
-
       {times.map(time => (
         <li key={time.id}>
           <ItemDisplay 
@@ -17,6 +14,13 @@ const List = ({ topic, times }) => {
         </li>
       )).reverse()}
     </ul>
+  )
+
+  return (
+    <div>
+      <FormInput topic={topic} />
+      <TimesUl />
+    </div>
   )
 }
 

@@ -24,10 +24,8 @@ const List = ({ categories, receiveCategory }) => {
   }
   const date = new Date();
   const newCategory = {id: date.getTime(), name: ''};
-  return (
-    <div style={containerStyle}>
-      <button style={buttonStyle}
-        onClick={receiveCategory.bind(this, newCategory)}>+ category</button>
+  const CategoriesUl = () => {
+    return (
       <ul style={ulStyle}>
         {categories.map(category => (
           <li key={category.id}>
@@ -35,6 +33,14 @@ const List = ({ categories, receiveCategory }) => {
           </li>
         )).reverse()}
       </ul>
+    )
+  };
+  return (
+    <div style={containerStyle}>
+      <button 
+        onClick={receiveCategory.bind(this, newCategory)}
+        style={buttonStyle}>+ category</button>
+      <CategoriesUl />
     </div>
   )
 }

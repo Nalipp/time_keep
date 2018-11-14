@@ -5,7 +5,7 @@ import { getTopicsByCategoryId } from '../../reducers/selectors';
 import * as actions from '../../actions/topic_actions';
 
 const List = ({ topics }) => {
-  return (
+  const TopicsUl = () => (
     <ul>
       {topics.map(topic => (
         <li key={topic.id}>
@@ -13,6 +13,9 @@ const List = ({ topics }) => {
         </li>
       )).reverse()}
     </ul>
+  )
+  return (
+    <TopicsUl />
   )
 }
 
