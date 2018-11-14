@@ -117,7 +117,7 @@ class TimerControl extends React.Component {
         <div style={timeDisplayStyle}
           onClick={this.toggleTimeLog}>
           <p style={editStyle}>edit</p>
-          <p style={totalTimeStyle}>Total Time: </p>
+          <p className='toggle-time' style={totalTimeStyle}>Total Time: </p>
           <TimerDisplay time={this.props.timeTotal} />
         </div>
         {this.state.displayTimeLog &&

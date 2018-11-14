@@ -1,17 +1,16 @@
 import React from 'react';
 import { Provider } from 'react-redux';
-import store from 'store/store';
+import { createStore } from 'redux';
+import reducer from 'reducers/root_reducer';
 
-import { getAllCategories } from 'reducers/selectors';
-
-window.store = store;
-window.getAllCategories = getAllCategories;
-
-const Root = ({ children }) => (
-  <Provider store={store}>
-    {children}
-  </Provider>
-);
+const Root = ({ children, initialState = {} }) => {
+  const store = createStore(reducer, initialState);
+  return (
+    <Provider store={store}>
+      {children}
+    </Provider>
+  )
+};
 
 export default Root;
 
