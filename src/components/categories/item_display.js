@@ -26,6 +26,7 @@ const ItemDisplay = ({category, toggleDisplayForm, timeTotal}) => {
   return (
     <div style={itemDisplayStyle}>
       <p style={itemDisplayEditStyle}
+         className='toggle-category-detail'
          onClick={toggleDisplayForm}>edit</p>
       <div style={categoryStyle}>
         <p 

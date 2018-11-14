@@ -30,4 +30,3 @@ it('shows the name for each category', () => {
 });
 
 
-
