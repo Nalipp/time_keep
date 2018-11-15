@@ -69,20 +69,27 @@ class FormInput extends React.Component {
       <div>
         <div style={{position: 'relative'}}>
           {this.props.topic.title &&
-            <p style={toggleStyle}
+            <p 
+              className="toggle-topic-out"
+              style={toggleStyle}
               onClick={this.props.toggleDisplayForm}>X</p>}
           <p style={deleteStyle} 
+            className="delete-topic"
             onClick={this.handleDelete}>delete</p>
         </div>
-        <form onSubmit={this.handleSubmit}>
+        <form 
+          className="topic-form"
+          onSubmit={this.handleSubmit}>
           <label style={labelStyle}>Title</label>
           <input 
+            className="topic-input"
             style={inputStyle}
             value={this.state.title}
             onChange={this.handleTitleChange}/>
 
           <label style={labelStyle}>Description</label>
           <textarea
+            className="topic-textarea"
             style={inputStyle}
             value={this.state.description}
             onChange={this.handleDescriptionChange}>

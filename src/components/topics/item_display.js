@@ -16,8 +16,10 @@ const ItemDisplay = ({topic, toggleDisplayForm, toggleDetail}) => {
   return (
     <div style={itemDisplayStyle}>
       <p style={itemDisplayEditStyle}
+         className="toggle-topic-in"
          onClick={toggleDisplayForm}>edit</p>
       <p style={itemStyle} 
+        className="topic-title"
         onClick={toggleDetail}>{topic.title}</p>
     </div>
   )

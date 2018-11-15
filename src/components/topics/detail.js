@@ -24,7 +24,8 @@ const Detail = ({ topic, toggleDetail }) => {
   return (
     <ul>
       <div style={controlStyle}>
-        <p style={toggleStyle} onClick={toggleDetail}>X</p>
+        <p style={toggleStyle}
+          onClick={toggleDetail}>X</p>
         <TimerControl topic={topic} />
       </div>
       <li>
@@ -33,7 +34,9 @@ const Detail = ({ topic, toggleDetail }) => {
       </li>
       <li>
         <p style={labelStyle}>description</p>
-        <p style={detailStyle}>{topic.description}</p>
+        <p 
+          className="detail-topic-description"
+          style={detailStyle}>{topic.description}</p>
       </li>
     </ul>
   )
